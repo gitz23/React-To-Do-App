@@ -5,10 +5,8 @@ const Form = ({ addToDo }) => {
     const [task, setTask] = useState("")
     
     function handleTaskChange(e){
-  
         setTask(e.target.value)
-
-    }
+    };
 
     function handleFormSubmit(e){
         e.preventDefault()

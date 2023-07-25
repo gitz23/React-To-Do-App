@@ -16,11 +16,12 @@
     },
     {
       "id": "f14f1c96-10a3-7f2e-3e2a-0a317f3b1c8f",
-      "task": "reeeeed"
+      "task": "Polishing shoes",
+      "isTrue": false
     },
     {
       "id": "fda0a948-17a7-b072-36ca-80e062bc6388",
-      "task": "will it show alert",
+      "task": "Brushing teeth",
       "isTrue": false
     },
     {
