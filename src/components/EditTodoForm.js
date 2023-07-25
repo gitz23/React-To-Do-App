@@ -12,7 +12,7 @@ const EditTodoForm = ({ editTodo, todo }) => {
 
     function handleFormSubmit(e){
         e.preventDefault()
-        editTodo(task)
+        editTodo(task, todo)
 
         setTask("")
     }

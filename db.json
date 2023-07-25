@@ -3,11 +3,12 @@
     {
       "id": 2,
       "task": "Cleaning utensils",
-      "isTrue" : false
+      "isTrue": false
     },
     {
       "id": 4,
-      "task": "Washing clothes"
+      "task": "Washing clothes",
+      "isTrue": false
     },
     {
       "id": "7dfec591-931e-52ab-2aaf-796bc831e45a",
@@ -19,7 +20,13 @@
     },
     {
       "id": "fda0a948-17a7-b072-36ca-80e062bc6388",
-      "task": "will it show alert"
+      "task": "will it show alert",
+      "isTrue": false
+    },
+    {
+      "id": "c180ceb5-880c-cfcc-ac37-c507016eee0f",
+      "task": "Jogging",
+      "isTrue": false
     }
   ]
 }

@@ -48,7 +48,8 @@ function addToDo(todo){
     },
     body : JSON.stringify({
       id :uuid(),
-      task : todo
+      task : todo,
+      isTrue: false
     })
   })
   .then(r => r.json())
@@ -67,9 +68,33 @@ function editTodo(id){
     setTodos(todos.map(todo => todo.id === id ? {...todo, isTrue: !todo.isTrue} : todo))
 }
  
+function editTask(task, todo){
+  fetch(`http://localhost:4000/todos/${todo.id}`, {
+    method: "PATCH",
+    headers:{
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify({
+      task : task,
+      isTrue: !todo.isTrue
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    Swal.fire({  
+      title: 'Success',  
+      type: 'success',  
+      text: 'Task updated successfully.',  
+    });
+    setTodos(todos.map(todo => todo.id === data.id ? data: todo))
+  })
+ 
+}
+
   const displayItems = todos.map((todo) => {
 
-   return todo.isTrue ? (<EditTodoForm key={todo.id} todo ={todo}/>) : (<Todo key={todo.id} todo={todo} editTodo={editTodo} handleDelete = {handleDelete}/>)
+   return todo.isTrue ? (<EditTodoForm key={todo.id} todo ={todo} editTodo={editTask} />) : (<Todo key={todo.id} todo={todo} editTodo={editTodo} handleDelete = {handleDelete}/>)
     
        
   })
