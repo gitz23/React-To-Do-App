@@ -11,6 +11,7 @@ const Todo = ({editTodo, todo, handleDelete}) => {
         </div>
         <div className='buttonss'>
           <button onClick={() => editTodo(todo.id)}><FontAwesomeIcon icon={faPenToSquare} /></button>
+          {/* the clicked todo is passed in as an argument upon click  to the delete function described in the parent*/}
           <button onClick={() => handleDelete(todo)}><FontAwesomeIcon icon={faTrash} /></button>
         </div>
       </div>
